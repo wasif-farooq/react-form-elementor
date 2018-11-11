@@ -26,9 +26,13 @@ class Base extends Component
         return e.target.value;
     }
 
+    getValue()
+    {
+        return this.state.value;
+    }
+
     onChange(e) {
         let value = this.getFieldValue(e);
-        console.log("value : ", value);
         this.setState({
             value: value
         })
