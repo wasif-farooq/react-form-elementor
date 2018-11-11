@@ -21,8 +21,14 @@ class Base extends Component
         }
     }
 
+    getFieldValue(e)
+    {
+        return e.target.value;
+    }
+
     onChange(e) {
-        let value = e.target.value;
+        let value = this.getFieldValue(e);
+        console.log("value : ", value);
         this.setState({
             value: value
         })
@@ -30,27 +36,27 @@ class Base extends Component
     }
 
     onBlur(e) {
-        let value = e.target.value;
+        let value = this.getFieldValue(e);
         this.emit(value, this.state.onBlur);
     }
 
     onFocus(e) {
-        let value = e.target.value;
+        let value = this.getFieldValue(e);
         this.emit(value, this.state.onFocus);
     }
 
     onKeyPress(e) {
-        let value = e.target.value;
+        let value = this.getFieldValue(e);
         this.emit(value, this.state.onKeyPress);
     }
 
     onKeyUp(e) {
-        let value = e.target.value;
+        let value = this.getFieldValue(e);
         this.emit(value, this.state.onKeyUp);
     }
 
     onKeyDown(e) {
-        let value = e.target.value;
+        let value = this.getFieldValue(e);
         this.emit(value, this.state.onKeyDown);
     }
 }

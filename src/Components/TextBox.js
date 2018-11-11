@@ -31,9 +31,9 @@ class TextBox extends Base
             <input
                 type="text" 
                 value={this.state.value} 
-                name={this.state.name} 
-                className={this.state.classes} 
-                placeholder={this.state.placeholder} 
+                {...(this.state.classes ? { className: this.state.classes }: '')}
+                {...(this.state.name ? { name: this.state.name }: '')}
+                {...(this.state.placeholder ? { placeholder: this.state.placeholder }: '')}
                 {...(this.state.maxLength ? { maxLength: this.state.maxLength }: '')}
                 {...(this.onChange ? { onChange: this.onChange }: '')} 
                 {...(this.onBlur ? { onBlur: this.onBlur }: '')} 
