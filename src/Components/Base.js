@@ -37,10 +37,10 @@ class Base extends Component
 
     /**
      * 
-     * @param Object e 
+     * @param Object event
      * @return String|Array|Object
      */
-    getFieldValue(e)
+    getFieldValue(event)
     {
         return e.target.value;
     }
@@ -55,11 +55,11 @@ class Base extends Component
 
     /**
      * 
-     * @param Object e 
+     * @param Object event
      * @return void
      */
-    onChange(e) {
-        let value = this.getFieldValue(e);
+    onChange(event) {
+        let value = this.getFieldValue(event);
         this.setState({
             value: value
         })
@@ -68,51 +68,51 @@ class Base extends Component
 
     /**
      * 
-     * @param Object e 
+     * @param Object event
      * @return void
      */
-    onBlur(e) {
-        let value = this.getFieldValue(e);
+    onBlur(event) {
+        let value = this.getFieldValue(event);
         this.emit(value, this.state.onBlur);
     }
 
     /**
      * 
-     * @param Object e 
+     * @param Object event
      * @return void
      */
-    onFocus(e) {
-        let value = this.getFieldValue(e);
+    onFocus(event) {
+        let value = this.getFieldValue(event);
         this.emit(value, this.state.onFocus);
     }
 
     /**
      * 
-     * @param Object e 
+     * @param Object event
      * @return void
      */
-    onKeyPress(e) {
-        let value = this.getFieldValue(e);
+    onKeyPress(event) {
+        let value = this.getFieldValue(event);
         this.emit(value, this.state.onKeyPress);
     }
 
     /**
      * 
-     * @param Object e 
+     * @param Object event
      * @return void
      */
-    onKeyUp(e) {
-        let value = this.getFieldValue(e);
+    onKeyUp(event) {
+        let value = this.getFieldValue(event);
         this.emit(value, this.state.onKeyUp);
     }
 
     /**
      * 
-     * @param Object e 
+     * @param Object event
      * @return void
      */
-    onKeyDown(e) {
-        let value = this.getFieldValue(e);
+    onKeyDown(event) {
+        let value = this.getFieldValue(event);
         this.emit(value, this.state.onKeyDown);
     }
 }

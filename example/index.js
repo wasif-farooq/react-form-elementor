@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { TextBox } from '../src';
+import { TextBox, Password, Hidden } from '../src';
 
 class App extends Component
 {
@@ -9,6 +9,8 @@ class App extends Component
             <div>
                 <h1>App Test</h1>
                 <TextBox value="me" />
+                <Password value="me" />
+                <Hidden value="me" />
             </div>
         )
     }

@@ -6,6 +6,7 @@ class TextBox extends Base
     constructor(props)
     {
         super(props);
+        this.type = 'text';
 
         let defaults = {
             name: '',
@@ -13,6 +14,8 @@ class TextBox extends Base
             placeholder: '',
             classes: '',
             maxLength: false,
+            disabled: false,
+            readOnly: false,
             onChange: false,
             onBlur: false,
             onFocus: false,
@@ -21,19 +24,19 @@ class TextBox extends Base
             onKeyDown: false,
         };
 
-        console.log("textomg");
         this.state = Object.assign({}, defaults, props);
     }
 
     render() {
-        console.log(this);
         return (
             <input
-                type="text" 
+                type={this.type} 
                 value={this.state.value} 
                 {...(this.state.classes ? { className: this.state.classes }: '')}
                 {...(this.state.name ? { name: this.state.name }: '')}
                 {...(this.state.placeholder ? { placeholder: this.state.placeholder }: '')}
+                {...(this.state.disabled ? { disabled: this.state.disabled }: '')}
+                {...(this.state.readOnly ? { readOnly: this.state.readOnly }: '')}
                 {...(this.state.maxLength ? { maxLength: this.state.maxLength }: '')}
                 {...(this.onChange ? { onChange: this.onChange }: '')} 
                 {...(this.onBlur ? { onBlur: this.onBlur }: '')} 
