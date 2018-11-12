@@ -20,6 +20,9 @@ class Base extends Component
         this.onKeyPress = this.onKeyPress.bind(this);
         this.onKeyUp = this.onKeyUp.bind(this);
         this.onKeyDown = this.onKeyDown.bind(this);
+        this.onClick = this.onClick.bind(this);
+        this.onMouseDown = this.onMouseDown.bind(this);
+        this.onMouseUp = this.onMouseUp.bind(this);
     }
 
     /**
@@ -28,10 +31,10 @@ class Base extends Component
      * @param Function callback 
      * @return void
      */
-    emit(value, callback)
+    emit(value, event, callback)
     {
         if (callback) {
-            callback(value);
+            callback(value, event);
         }
     }
 
@@ -63,7 +66,7 @@ class Base extends Component
         this.setState({
             value: value
         })
-        this.emit(value, this.state.onChange);
+        this.emit(value, event, this.state.onChange);
     }
 
     /**
@@ -73,7 +76,7 @@ class Base extends Component
      */
     onBlur(event) {
         let value = this.getFieldValue(event);
-        this.emit(value, this.state.onBlur);
+        this.emit(value, event, this.state.onBlur);
     }
 
     /**
@@ -83,7 +86,7 @@ class Base extends Component
      */
     onFocus(event) {
         let value = this.getFieldValue(event);
-        this.emit(value, this.state.onFocus);
+        this.emit(value, event, this.state.onFocus);
     }
 
     /**
@@ -93,7 +96,7 @@ class Base extends Component
      */
     onKeyPress(event) {
         let value = this.getFieldValue(event);
-        this.emit(value, this.state.onKeyPress);
+        this.emit(value, event, this.state.onKeyPress);
     }
 
     /**
@@ -103,7 +106,7 @@ class Base extends Component
      */
     onKeyUp(event) {
         let value = this.getFieldValue(event);
-        this.emit(value, this.state.onKeyUp);
+        this.emit(value, event, this.state.onKeyUp);
     }
 
     /**
@@ -113,7 +116,37 @@ class Base extends Component
      */
     onKeyDown(event) {
         let value = this.getFieldValue(event);
-        this.emit(value, this.state.onKeyDown);
+        this.emit(value, event, this.state.onKeyDown);
+    }
+
+    /**
+     * 
+     * @param Object event
+     * @return void
+     */
+    onClick(event) {
+        let value = this.getFieldValue(event);
+        this.emit(value, event, this.state.onKeyDown);
+    }
+
+    /**
+     * 
+     * @param Object event
+     * @return void
+     */
+    onMouseDown(event) {
+        let value = this.getFieldValue(event);
+        this.emit(value, event, this.state.onKeyDown);
+    }
+
+    /**
+     * 
+     * @param Object event
+     * @return void
+     */
+    onMouseUp(event) {
+        let value = this.getFieldValue(event);
+        this.emit(value, event, this.state.onKeyDown);
     }
 }
 

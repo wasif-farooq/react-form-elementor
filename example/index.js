@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { TextBox, Password, Hidden } from '../src';
+import { TextBox, Password, Hidden, CheckBox } from '../src';
 
 class App extends Component
 {
@@ -11,6 +11,7 @@ class App extends Component
                 <TextBox value="me" />
                 <Password value="me" />
                 <Hidden value="me" />
+                <CheckBox name="text" value="1" title="Checkbox" />
             </div>
         )
     }

@@ -39,11 +39,11 @@ class TextBox extends Base
                 {...(this.state.readOnly ? { readOnly: this.state.readOnly }: '')}
                 {...(this.state.maxLength ? { maxLength: this.state.maxLength }: '')}
                 {...(this.onChange ? { onChange: this.onChange }: '')} 
-                {...(this.onBlur ? { onBlur: this.onBlur }: '')} 
-                {...(this.onFocus ? { onFocus: this.onFocus }: '')} 
-                {...(this.onKeyPress ? { onKeyPress: this.onKeyPress }: '')} 
-                {...(this.onKeyUp ? { onKeyUp: this.onKeyUp }: '')} 
-                {...(this.onKeyDown ? { onKeyDown: this.onKeyDown }: '')} 
+                {...(this.state.onBlur ? { onBlur: this.onBlur }: '')} 
+                {...(this.state.onFocus ? { onFocus: this.onFocus }: '')} 
+                {...(this.state.onKeyPress ? { onKeyPress: this.onKeyPress }: '')} 
+                {...(this.state.onKeyUp ? { onKeyUp: this.onKeyUp }: '')} 
+                {...(this.state.onKeyDown ? { onKeyDown: this.onKeyDown }: '')} 
             />
         )
     }
