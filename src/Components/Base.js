@@ -23,6 +23,7 @@ class Base extends Component
         this.onClick = this.onClick.bind(this);
         this.onMouseDown = this.onMouseDown.bind(this);
         this.onMouseUp = this.onMouseUp.bind(this);
+        this.onSelectStart = this.onSelectStart.bind(this);
     }
 
     /**
@@ -126,7 +127,7 @@ class Base extends Component
      */
     onClick(event) {
         let value = this.getFieldValue(event);
-        this.emit(value, event, this.state.onKeyDown);
+        this.emit(value, event, this.state.onClick);
     }
 
     /**
@@ -136,7 +137,7 @@ class Base extends Component
      */
     onMouseDown(event) {
         let value = this.getFieldValue(event);
-        this.emit(value, event, this.state.onKeyDown);
+        this.emit(value, event, this.state.onMouseDown);
     }
 
     /**
@@ -146,7 +147,12 @@ class Base extends Component
      */
     onMouseUp(event) {
         let value = this.getFieldValue(event);
-        this.emit(value, event, this.state.onKeyDown);
+        this.emit(value, event, this.state.onMouseUp);
+    }
+
+    onSelectStart(Event) {
+        let value = this.getFieldValue(event);
+        this.emit(value, event, this.state.onSelectStart);
     }
 }
 

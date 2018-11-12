@@ -10,7 +10,7 @@ class CheckBox extends Base
         let defaults = {
             name: '',
             value: '',
-            title: '',
+            options: [],
             classes: '',
             disabled: false,
             onClick: false,
@@ -18,21 +18,34 @@ class CheckBox extends Base
             onFocus: false,
             onMouseDown: false,
             onMouseUp: false,
+            onSelectStart: false
         };
 
         this.state = Object.assign({}, defaults, props);
     }
 
     getFieldValue(event) {
-        return event.target.checked ? event.target.value: '';
+        let nodes = document.getElementsByName(event.target.name);
+        let values = [];
+        for (let node of nodes) {
+            if (node.checked) {
+                values.push(node.value);
+            }
+        }
+
+        return this.state.options.length > 1 ? values: values.shift();
     }
 
     render() {
         return (
-            <label htmlFor={this.state.name}>
+            <Fragment>
+            {this.state.options.map((option) => {
+                return <label htmlFor={this.state.name + '-' + option.value} key={this.state.name + '-' + option.value}>
                 <input
                     type={this.type} 
-                    value={this.state.value} 
+                    value={option.value} 
+                    id={this.state.name + '-' + option.value} 
+                    {...(Array.from(this.state.value).indexOf(option.value) !== -1 ? {checked: true}: '')}
                     {...(this.state.classes ? { className: this.state.classes }: '')}
                     {...(this.state.name ? { name: this.state.name }: '')}
                     {...(this.state.disabled ? { disabled: this.state.disabled }: '')}
@@ -41,9 +54,12 @@ class CheckBox extends Base
                     {...(this.state.onFocus ? { onFocus: this.onFocus }: '')} 
                     {...(this.state.onMouseDown ? { onMouseDown: this.onMouseDown }: '')} 
                     {...(this.state.onMouseUp ? { onMouseUp: this.onMouseUp }: '')} 
+                    {...(this.state.onSelectStart ? { onSelectStart: this.onSelectStart }: '')} 
                 />
-                {this.state.title}
+                {option.label}
             </label>
+            })}    
+            </Fragment>
         )
     }
 }
