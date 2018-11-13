@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Base } from './Base';
 import { Option } from './Option';
 
@@ -6,7 +6,8 @@ class DropDown extends Base
 {
     constructor(props) {
         super(props);
-        this.type = 'checkbox';
+        this.type = 'select';
+        this.multiple = false;
 
         this.defaults = {
             name: '',
@@ -26,27 +27,15 @@ class DropDown extends Base
         };
     }
 
-    getFieldValue(event) {
-        let nodes = document.getElementsByName(event.target.name)[0].getElementsByTagName('option');
-        let values = [];
-        for (let node of nodes) {
-            if (node.checked) {
-                values.push(node.value);
-            }
-        }
-
-        return this.state.options.length == 1 ? values.shift(): values;
-    }
-
-
-
     render() {
         const { value, options } = this.state;
         
         return (
             <select
-                id={this.state.name + '-' + option.value} 
+                id={this.state.name} 
                 name={this.state.name || ''}
+                multiple={this.multiple} 
+                value={value} 
                 {...(this.state.classes ? { className: this.state.classes }: '')}
                 {...(this.state.disabled ? { disabled: this.state.disabled }: '')}
                 {...(this.onChange ? { onChange: this.onChange }: '')} 
@@ -59,9 +48,10 @@ class DropDown extends Base
                 {options.map((option) => {
                     return (
                         <Option 
+                            key={option.value}
                             value={option.value} 
                             label={option.label} 
-                            selected={Array.from(value).indexOf(option.value) !== -1 ? true: false} />
+                        />
                     )
                 })}    
             </select>
@@ -69,4 +59,4 @@ class DropDown extends Base
     }
 }
 
-export { CheckBox }
+export { DropDown }

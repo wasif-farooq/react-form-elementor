@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { TextBox, Password, Hidden, CheckBox, RadioBox } from '../src';
+import { 
+    TextBox,
+    Password,
+    Hidden,
+    CheckBox,
+    RadioBox,
+    DropDown,
+    MultiSelect
+} from '../src';
 
 class App extends Component
 {
@@ -11,6 +19,8 @@ class App extends Component
             test: 'text em',
             chk: '',
             rdo: '',
+            dd: '1',
+            mm: ['1']
         };
 
         this.onChange = this.onChange.bind(this);
@@ -42,6 +52,9 @@ class App extends Component
                 <br />
                 <RadioBox name="rdo" value={this.state.rdo} default="1" onChange={this.onChange} />
                 <RadioBox name="rdo" value={this.state.rdo} default="2" onChange={this.onChange} />
+
+                <DropDown name="dd" value={this.state.dd} options={options} onChange={this.onChange} />
+                <MultiSelect name="mm" value={this.state.mm} options={options} onChange={this.onChange} />
                 
             </div>
         )

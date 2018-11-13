@@ -1,9 +1,9 @@
-inport React from 'react';
+import React from 'react';
 
 const Option = (props) => {
-    const { value, label, selected } = props;
+    const { value, label } = props;
     return (
-        <option value={value} selected={selected}>{label}</option>
+        <option value={value}>{label}</option>
     )
 };
 
