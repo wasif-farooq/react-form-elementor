@@ -8,14 +8,16 @@ class App extends Component
         super(props);
 
         this.state = {
-            value: 'text em'
+            test: 'text em'
         };
 
         this.onChange = this.onChange.bind(this);
     }
 
-    onChange(value) {
-        this.setState({value: value});
+    onChange(value, name) {
+        let state = this.state;
+        state[name] = value;
+        this.setState(state);
     }
 
     render() {
@@ -30,13 +32,13 @@ class App extends Component
         return (
             <div>
                 <h1>App Test</h1>
-                <TextBox value={this.state.value} onChange={this.onChange} />
-                <Password value={this.state.value} onChange={this.onChange} />
+                <TextBox value={this.state.test} name="test" onChange={this.onChange} />
+                <Password value={this.state.test} name="test" onChange={this.onChange} />
                 <Hidden value="me" />
                 <br />
-                <CheckBox name="text" value="1" options={options} value="0" />
+                <CheckBox name="text" value="1" options={options} value="0" onChange={this.onChange} />
                 <br />
-                <RadioBox name="rad" value="1" options={options} value="0" />
+                <RadioBox name="rad" value="1" options={options} value="0" onChange={this.onChange} />
             </div>
         )
     }

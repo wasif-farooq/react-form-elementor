@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Base } from './Base';
 
 class TextBox extends Base
@@ -23,6 +23,19 @@ class TextBox extends Base
             onKeyUp: false,
             onKeyDown: false,
         };
+/*
+        events = {};
+
+        const {
+            onChange: events.onChange,
+            onBlur: events.onBlur,
+            onFocus: events.onFocus,
+            onKeyPress: events.onKeyPress,
+            onKeyUp: events.onKeyUp,
+            onKeyDown: events.onKeyDown
+        } = props;
+
+        console.log("events : ", events);*/
 
         this.state = Object.assign({}, defaults, props);
     }

@@ -35,7 +35,7 @@ class Base extends Component
     emit(value, event, callback)
     {
         if (callback) {
-            callback(value, event);
+            callback(value, event.target.name, event);
         }
     }
 
@@ -64,9 +64,6 @@ class Base extends Component
      */
     onChange(event) {
         let value = this.getFieldValue(event);
-        this.setState({
-            value: value
-        })
         this.emit(value, event, this.state.onChange);
     }
 
