@@ -46,7 +46,7 @@ class Base extends Component
      */
     getFieldValue(event)
     {
-        return e.target.value;
+        return event.target.value;
     }
 
     /**
@@ -153,6 +153,10 @@ class Base extends Component
     onSelectStart(Event) {
         let value = this.getFieldValue(event);
         this.emit(value, event, this.state.onSelectStart);
+    }
+
+    componentWillUpdate(props, state) {
+        state = Object.assign(state, props);
     }
 }
 
