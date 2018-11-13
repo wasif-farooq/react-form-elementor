@@ -24,6 +24,8 @@ class Base extends Component
         this.onMouseDown = this.onMouseDown.bind(this);
         this.onMouseUp = this.onMouseUp.bind(this);
         this.onSelectStart = this.onSelectStart.bind(this);
+
+        this.state = Object.assign({}, this.defaults, this.events, props);
     }
 
     /**

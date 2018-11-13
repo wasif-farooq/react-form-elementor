@@ -7,12 +7,15 @@ class CheckBox extends Base
         super(props);
         this.type = 'checkbox';
 
-        let defaults = {
+        this.defaults = {
             name: '',
-            value: '',
+            value: [],
             options: [],
             classes: '',
-            disabled: false,
+            disabled: false
+        };
+
+        this.events = {
             onClick: false,
             onBlur: false,
             onFocus: false,
@@ -20,8 +23,6 @@ class CheckBox extends Base
             onMouseUp: false,
             onSelectStart: false
         };
-
-        this.state = Object.assign({}, defaults, props);
     }
 
     getFieldValue(event) {
@@ -33,31 +34,37 @@ class CheckBox extends Base
             }
         }
 
-        return this.state.options.length > 1 ? values: values.shift();
+        return this.state.options.length == 1 ? values.shift(): values;
     }
 
+
+
     render() {
+        const { value, options } = this.state;
+        console.log("val :", value);
         return (
             <Fragment>
-            {this.state.options.map((option) => {
-                return <label htmlFor={this.state.name + '-' + option.value} key={this.state.name + '-' + option.value}>
-                <input
-                    type={this.type} 
-                    value={option.value} 
-                    id={this.state.name + '-' + option.value} 
-                    {...(Array.from(this.state.value).indexOf(option.value) !== -1 ? {checked: true}: '')}
-                    {...(this.state.classes ? { className: this.state.classes }: '')}
-                    {...(this.state.name ? { name: this.state.name }: '')}
-                    {...(this.state.disabled ? { disabled: this.state.disabled }: '')}
-                    {...(this.onClick ? { onClick: this.onClick }: '')} 
-                    {...(this.state.onBlur ? { onBlur: this.onBlur }: '')} 
-                    {...(this.state.onFocus ? { onFocus: this.onFocus }: '')} 
-                    {...(this.state.onMouseDown ? { onMouseDown: this.onMouseDown }: '')} 
-                    {...(this.state.onMouseUp ? { onMouseUp: this.onMouseUp }: '')} 
-                    {...(this.state.onSelectStart ? { onSelectStart: this.onSelectStart }: '')} 
-                />
-                {option.label}
-            </label>
+            {options.map((option) => {
+                return (
+                    <label htmlFor={this.state.name + '-' + option.value} key={this.state.name + '-' + option.value}>
+                        <input
+                            type={this.type} 
+                            value={option.value} 
+                            id={this.state.name + '-' + option.value} 
+                            checked={Array.from(value).indexOf(option.value) !== -1 ? true: false} 
+                            name={this.state.name || ''}
+                            {...(this.state.classes ? { className: this.state.classes }: '')}
+                            {...(this.state.disabled ? { disabled: this.state.disabled }: '')}
+                            {...(this.onChange ? { onChange: this.onChange }: '')} 
+                            {...(this.state.onBlur ? { onBlur: this.onBlur }: '')} 
+                            {...(this.state.onFocus ? { onFocus: this.onFocus }: '')} 
+                            {...(this.state.onMouseDown ? { onMouseDown: this.onMouseDown }: '')} 
+                            {...(this.state.onMouseUp ? { onMouseUp: this.onMouseUp }: '')} 
+                            {...(this.state.onSelectStart ? { onSelectStart: this.onSelectStart }: '')} 
+                        />
+                        {option.label}
+                    </label>
+                )
             })}    
             </Fragment>
         )

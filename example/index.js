@@ -8,7 +8,9 @@ class App extends Component
         super(props);
 
         this.state = {
-            test: 'text em'
+            test: 'text em',
+            chk: ['1'],
+            rdo: '1',
         };
 
         this.onChange = this.onChange.bind(this);
@@ -36,9 +38,9 @@ class App extends Component
                 <Password value={this.state.test} name="test" onChange={this.onChange} />
                 <Hidden value="me" />
                 <br />
-                <CheckBox name="text" value="1" options={options} value="0" onChange={this.onChange} />
+                <CheckBox name="chk" value={this.state.chk} options={options} onChange={this.onChange} />
                 <br />
-                <RadioBox name="rad" value="1" options={options} value="0" onChange={this.onChange} />
+                <RadioBox name="rdo" value={this.state.rdo} options={options} onChange={this.onChange} />
             </div>
         )
     }

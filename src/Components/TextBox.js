@@ -8,36 +8,24 @@ class TextBox extends Base
         super(props);
         this.type = 'text';
 
-        let defaults = {
+        this.defaults = {
             name: '',
             value: '',
             placeholder: '',
             classes: '',
             maxLength: false,
             disabled: false,
-            readOnly: false,
+            readOnly: false
+        };
+
+        this.events = {
             onChange: false,
             onBlur: false,
             onFocus: false,
             onKeyPress: false,
             onKeyUp: false,
-            onKeyDown: false,
+            onKeyDown: false
         };
-/*
-        events = {};
-
-        const {
-            onChange: events.onChange,
-            onBlur: events.onBlur,
-            onFocus: events.onFocus,
-            onKeyPress: events.onKeyPress,
-            onKeyUp: events.onKeyUp,
-            onKeyDown: events.onKeyDown
-        } = props;
-
-        console.log("events : ", events);*/
-
-        this.state = Object.assign({}, defaults, props);
     }
 
     render() {
