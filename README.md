@@ -66,12 +66,36 @@ This is a `<input type="text" />` element.
 - maxLength: either state variable or boolean integer
 - classes: eiter state or string of class names
 #### Events
-- onChange
+- onChange:
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onBlur
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onFocus
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyPress
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyDown
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyUp
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 
 #### Text Area
 
