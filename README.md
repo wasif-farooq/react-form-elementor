@@ -63,7 +63,7 @@ This is a `<input type="text" />` element.
 - placeholder: String
 - disabled: either state variable or boolean value
 - readOnly:  either state variable or boolean value
-- maxLength: either state variable or boolean integer
+- maxLength: either state variable or integer
 - classes: eiter state or string of class names
 #### Events
 - onChange:
@@ -98,6 +98,45 @@ This is a `<input type="text" />` element.
         - event: Object (the Event Object)
 
 #### Text Area
+- name: String
+- value: either state variable or a string value
+- placeholder: String
+- disabled: either state variable or boolean value
+- readOnly:  either state variable or boolean value
+- classes: eiter state or string of class names
+- rows: either state variable or integer
+- cols: either state variable or integer
+#### Events
+- onChange:
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
+- onBlur
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
+- onFocus
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
+- onKeyPress
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
+- onKeyDown
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
+- onKeyUp
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 
 #### Password
 #### Attributes
@@ -110,11 +149,35 @@ This is a `<input type="text" />` element.
 - classes: eiter state or string of class names
 #### Events
 - onChange
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onBlur
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onFocus
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyPress
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyDown
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyUp
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 
 #### Hidden
 #### Attributes
@@ -127,11 +190,35 @@ This is a `<input type="text" />` element.
 - classes: eiter state or string of class names
 #### Events
 - onChange
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onBlur
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onFocus
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyPress
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyDown
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyUp
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 
 #### Check Box
 #### Attributes
@@ -143,11 +230,35 @@ This is a `<input type="text" />` element.
 - classes: eiter state or string of class names
 #### Events
 - onChange
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onClick
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onBlur
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onFocus
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onMouseDown
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onMouseUp
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 
 #### Radio Box
 #### Attributes
@@ -159,11 +270,35 @@ This is a `<input type="text" />` element.
 - classes: eiter state or string of class names
 #### Events
 - onChange
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onClick
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onBlur
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onFocus
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onMouseDown
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onMouseUp
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 #### Drop Down
 #### Attributes
 - name: String
@@ -173,11 +308,35 @@ This is a `<input type="text" />` element.
 - classes: eiter state or string of class names
 #### Events
 - onChange
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onBlur
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onFocus
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyPress
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyDown
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyUp
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 
 #### Multi Select
 #### Attributes
@@ -188,11 +347,35 @@ This is a `<input type="text" />` element.
 - classes: eiter state or string of class names
 #### Events
 - onChange
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onBlur
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onFocus
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyPress
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyDown
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyUp
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 
 #### File
 #### Attributes
@@ -203,8 +386,32 @@ This is a `<input type="text" />` element.
 - multiple: boolean
 #### Events
 - onChange
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onBlur
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onFocus
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyPress
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyDown
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
 - onKeyUp
+    - params: 
+        - value: String
+        - name: String (the name of the field)
+        - event: Object (the Event Object)
