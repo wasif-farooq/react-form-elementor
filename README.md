@@ -69,32 +69,32 @@ import { TextBox } from 'react-form-elementor';
 - maxLength: either state variable or integer
 - classes: eiter state or string of class names
 ##### Events
-- onChange:
+- onChange (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onBlur
+- onBlur (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onFocus
+- onFocus (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyPress
+- onKeyPress (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyDown
+- onKeyDown (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyUp
+- onKeyUp (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
@@ -116,32 +116,32 @@ import { TextArea } from 'react-form-elementor';
 - rows: either state variable or integer
 - cols: either state variable or integer
 ##### Events
-- onChange:
+- onChange (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onBlur
+- onBlur (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onFocus
+- onFocus (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyPress
+- onKeyPress (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyDown
+- onKeyDown (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyUp
+- onKeyUp (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
@@ -162,32 +162,32 @@ import { Password } from 'react-form-elementor';
 - maxLength: either state variable or boolean integer
 - classes: eiter state or string of class names
 ##### Events
-- onChange
+- onChange (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onBlur
+- onBlur (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onFocus
+- onFocus (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyPress
+- onKeyPress (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyDown
+- onKeyDown (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyUp
+- onKeyUp (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
@@ -208,32 +208,32 @@ import { Hidden } from 'react-form-elementor';
 - maxLength: either state variable or boolean integer
 - classes: eiter state or string of class names
 ##### Events
-- onChange
+- onChange (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onBlur
+- onBlur (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onFocus
+- onFocus (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyPress
+- onKeyPress (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyDown
+- onKeyDown (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyUp
+- onKeyUp (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
@@ -253,32 +253,32 @@ import { CheckBox } from 'react-form-elementor';
 - readOnly:  either state variable or boolean value
 - classes: eiter state or string of class names
 ##### Events
-- onChange
+- onChange (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onClick
+- onClick (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onBlur
+- onBlur (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onFocus
+- onFocus (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onMouseDown
+- onMouseDown (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onMouseUp
+- onMouseUp (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
@@ -298,32 +298,32 @@ import { RadioBox } from 'react-form-elementor';
 - readOnly:  either state variable or boolean value
 - classes: eiter state or string of class names
 ##### Events
-- onChange
+- onChange (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onClick
+- onClick (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onBlur
+- onBlur (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onFocus
+- onFocus (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onMouseDown
+- onMouseDown (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onMouseUp
+- onMouseUp (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
@@ -342,32 +342,32 @@ import { DropDown } from 'react-form-elementor';
 - disabled: either state variable or boolean value
 - classes: eiter state or string of class names
 ##### Events
-- onChange
+- onChange (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onBlur
+- onBlur (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onFocus
+- onFocus (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyPress
+- onKeyPress (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyDown
+- onKeyDown (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyUp
+- onKeyUp (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
@@ -386,32 +386,32 @@ import { MultiSelect } from 'react-form-elementor';
 - disabled: either state variable or boolean value
 - classes: eiter state or string of class names
 ##### Events
-- onChange
+- onChange (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onBlur
+- onBlur (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onFocus
+- onFocus (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyPress
+- onKeyPress (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyDown
+- onKeyDown (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyUp
+- onKeyUp (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
@@ -430,32 +430,32 @@ import { File } from 'react-form-elementor';
 - classes: eiter state or string of class names
 - multiple: boolean
 ##### Events
-- onChange
+- onChange (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onBlur
+- onBlur (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onFocus
+- onFocus (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyPress
+- onKeyPress (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyDown
+- onKeyDown (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-- onKeyUp
+- onKeyUp (value, name, event)
     - params: 
         - value: String
         - name: String (the name of the field)
