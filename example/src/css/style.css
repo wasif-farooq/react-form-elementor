@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 /*font-family: 'Open Sans', sans-serif;*/
 body {
-	background: #c9ced9;
 	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
 	margin: 0;
@@ -59,21 +57,36 @@ body {
 textarea.form-control {
 	height: 150px;
 }
+.radio,
+.radio-inline,
 .checkbox,
-.radio {
+.checkbox-inline, {
 	font-size: 12px;
 	margin-bottom: 10px;
-	overflow: hidden;
 }
+.radio label,
+.radio-inline label,
 .checkbox label,
-.radio label {
-	display: block;
+.checkbox-inline label {
 	padding-left: 35px;
 	padding-bottom: 5px;
 	position: relative;
+	overflow: hidden;
 }
+.radio label,
+.checkbox label {
+	display: block;
+}
+.radio-inline,
+.checkbox-inline,
+.radio-inline label,
+.checkbox-inline label {
+	display: inline-block;
+}
+.radio .form-control,
+.radio-inline .form-control,
 .checkbox .form-control,
-.radio .form-control {
+.checkbox-inline .form-control {
 	height: auto;
 	margin: 0;
 	position: absolute;
@@ -81,8 +94,10 @@ textarea.form-control {
 	top: 0;
 	width: auto;
 }
+.radio input[type="radio"] + i,
+.radio-inline input[type="radio"] + i,
 .checkbox input[type="checkbox"] + i,
-.radio input[type="radio"] + i {
+.checkbox-inline input[type="checkbox"] + i {
 	border: 1px solid #32c6ff;
 	border-radius: 2px;
 	display: block;
@@ -92,13 +107,16 @@ textarea.form-control {
 	top: 3px;
 	width: 20px;
 }
-.radio input[type="radio"] + i {
+.radio input[type="radio"] + i,
+.radio-inline input[type="radio"] + i {
 	border-radius: 100%;
 }
-.checkbox input[type="checkbox"]:checked + i {
+.checkbox input[type="checkbox"]:checked + i,
+.checkbox-inline input[type="checkbox"]:checked + i {
 	background: #32c6ff;
 }
-.checkbox input[type="checkbox"]:checked + i:after {
+.checkbox input[type="checkbox"]:checked + i:after,
+.checkbox-inline input[type="checkbox"]:checked + i:after {
 	content: "\2713";
 	color: #ffffff;
 	position: absolute;
@@ -108,7 +126,8 @@ textarea.form-control {
 	font-size: 14px;
 	font-weight: 600;
 }
-.radio input[type="radio"]:checked + i:after {
+.radio input[type="radio"]:checked + i:after,
+.radio-inline input[type="radio"]:checked + i:after {
 	background: #32c6ff;
 	border-radius: 100%;
 	content: "";
@@ -120,14 +139,18 @@ textarea.form-control {
 	width: 8px;
 }
 .checkbox input[type="checkbox"]:disabled + i,
-.checkbox input[type="checkbox"]:checked:disabled + i {
+.checkbox-inline input[type="checkbox"]:disabled + i,
+.checkbox input[type="checkbox"]:checked:disabled + i,
+.checkbox-inline input[type="checkbox"]:checked:disabled + i {
 	background: #b1b5bf;
 	border: 1px solid #b1b5bf;
 }
-.radio input[type="radio"]:disabled + i {
+.radio input[type="radio"]:disabled + i,
+.radio-inline input[type="radio"]:disabled + i {
 	border: 1px solid #b1b5bf;
 }
-.radio input[type="radio"]:checked:disabled + i:after {
+.radio input[type="radio"]:checked:disabled + i:after,
+.radio-inline input[type="radio"]:checked:disabled + i:after {
 	background: #b1b5bf;
 }
 
@@ -284,7 +307,19 @@ textarea.form-control {
 /*MAIN CSS STYLE*/
 .main {
 	background: #e7edf0;
-	height: 450px;
+	/*height: 450px;*/
+}
+.aside {
+	background: #ffffff;
+	padding: 0 20px;
+	width: 455px;
+}
+.add-field .btn {
+	float: left;
+	margin-bottom: 15px;
+}
+.add-field .btn:nth-child(even) {
+	margin-left: 15px;
 }
 
 /*FOOTER CSS STYLE*/
