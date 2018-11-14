@@ -48,7 +48,7 @@ Here is some basic element that are provided.
 - [Multi Select](#multi-select)
 - [File](#file)
 
-## Details
+## Components
 <details>
 <summary>Text Box</summary>
 <p>
@@ -98,8 +98,11 @@ import { TextBox } from 'react-form-elementor';
         - event: Object (the Event Object)
 </p>
 </details>
+<details>
+<summary>Text Area</summary>
+<p>
 
-### Text Area
+
 This is a `<textarea>` element.
 ```
 import { TextArea } from 'react-form-elementor';
@@ -144,9 +147,12 @@ import { TextArea } from 'react-form-elementor';
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-___
+</p>
+</details>
+<details>
+<summary>Password</summary>
+<p>
 
-#### Password
 This is a `<input type="password" />` element.
 ```
 import { Password } from 'react-form-elementor';
@@ -190,9 +196,12 @@ import { Password } from 'react-form-elementor';
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-___
+</p>
+</details>
+<details>
+<summary>Hidden</summary>
+<p>
 
-#### Hidden
 This is a `<input type="hidden" />` element.
 ```
 import { Hidden } from 'react-form-elementor';
@@ -236,9 +245,12 @@ import { Hidden } from 'react-form-elementor';
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-___
+</p>
+</details>
+<details>
+<summary>Check Box</summary>
+<p>
 
-#### Check Box
 This is a `<input type="checkbox" />` element.
 ```
 import { CheckBox } from 'react-form-elementor';
@@ -281,9 +293,12 @@ import { CheckBox } from 'react-form-elementor';
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-___
+</p>
+</details>
+<details>
+<summary>Radio Box</summary>
+<p>
 
-#### Radio Box
 This is a `<input type="radio" />` element.
 ```
 import { RadioBox } from 'react-form-elementor';
@@ -326,9 +341,12 @@ import { RadioBox } from 'react-form-elementor';
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-___
+</p>
+</details>
+<details>
+<summary>Drop Down</summary>
+<p>
 
-#### Drop Down
 This is a `<select>` element.
 ```
 import { DropDown } from 'react-form-elementor';
@@ -370,9 +388,12 @@ import { DropDown } from 'react-form-elementor';
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-___
+</p>
+</details>
+<details>
+<summary>Multi Select</summary>
+<p>
 
-#### Multi Select
 This is a `<select multiple="true"></select` element.
 ```
 import { MultiSelect } from 'react-form-elementor';
@@ -414,9 +435,12 @@ import { MultiSelect } from 'react-form-elementor';
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
-___
+</p>
+</details>
+<details>
+<summary>File</summary>
+<p>
 
-#### File
 This is a `<input type="file" />` element.
 ```
 import { File } from 'react-form-elementor';
@@ -458,3 +482,5 @@ import { File } from 'react-form-elementor';
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
+</p>
+</details>
