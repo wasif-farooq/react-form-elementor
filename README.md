@@ -35,26 +35,15 @@ export default events(Form);
 
 **Note.** please be carefull you need to pass state key name as element name property like show in above example.
 
+
 ## Components
 Here is some basic element that are provided.
-
-- [Text Box](#text-box)
-- [Text Area](#text-area)
-- [Password](#password)
-- [Hidden](#hidden)
-- [Check Box](#check-box)
-- [Radio Box](#radio-box)
-- [Drop Down](#drop-down)
-- [Multi Select](#multi-select)
-- [File](#file)
-
-## Components
 <details>
 <summary>Text Box</summary>
 <p>
 
-This is a `<input type="text" />` element.
-```js
+This is a `<input type="text" />` element. Below is the code to import this component.
+```
 import { TextBox } from 'react-form-elementor';
 ```
 ###### Attributes
@@ -103,7 +92,7 @@ import { TextBox } from 'react-form-elementor';
 <p>
 
 
-This is a `<textarea>` element.
+This is a `<textarea>` element. Below is the code to import this component.
 ```
 import { TextArea } from 'react-form-elementor';
 ```
@@ -153,7 +142,7 @@ import { TextArea } from 'react-form-elementor';
 <summary>Password</summary>
 <p>
 
-This is a `<input type="password" />` element.
+This is a `<input type="password" />` element. Below is the code to import this component.
 ```
 import { Password } from 'react-form-elementor';
 ```
@@ -202,7 +191,7 @@ import { Password } from 'react-form-elementor';
 <summary>Hidden</summary>
 <p>
 
-This is a `<input type="hidden" />` element.
+This is a `<input type="hidden" />` element. Below is the code to import this component.
 ```
 import { Hidden } from 'react-form-elementor';
 ```
@@ -251,7 +240,7 @@ import { Hidden } from 'react-form-elementor';
 <summary>Check Box</summary>
 <p>
 
-This is a `<input type="checkbox" />` element.
+This is a `<input type="checkbox" />` element. Below is the code to import this component.
 ```
 import { CheckBox } from 'react-form-elementor';
 ```
@@ -299,7 +288,7 @@ import { CheckBox } from 'react-form-elementor';
 <summary>Radio Box</summary>
 <p>
 
-This is a `<input type="radio" />` element.
+This is a `<input type="radio" />` element. Below is the code to import this component.
 ```
 import { RadioBox } from 'react-form-elementor';
 ```
@@ -347,7 +336,7 @@ import { RadioBox } from 'react-form-elementor';
 <summary>Drop Down</summary>
 <p>
 
-This is a `<select>` element.
+This is a `<select>` element. Below is the code to import this component.
 ```
 import { DropDown } from 'react-form-elementor';
 ```
@@ -394,7 +383,7 @@ import { DropDown } from 'react-form-elementor';
 <summary>Multi Select</summary>
 <p>
 
-This is a `<select multiple="true"></select` element.
+This is a `<select multiple="true"></select` element. Below is the code to import this component.
 ```
 import { MultiSelect } from 'react-form-elementor';
 ```
@@ -441,7 +430,7 @@ import { MultiSelect } from 'react-form-elementor';
 <summary>File</summary>
 <p>
 
-This is a `<input type="file" />` element.
+This is a `<input type="file" />` element. Below is the code to import this component.
 ```
 import { File } from 'react-form-elementor';
 ```
