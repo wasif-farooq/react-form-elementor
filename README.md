@@ -49,7 +49,11 @@ Here is some basic element that are provided.
 - [File](#file)
 
 ## Details
-<details><summary>TEXT BOX</summary>
+<details>
+<summary>
+
+### Text Box
+</summary>
 <p>
 
 This is a `<input type="text" />` element.
