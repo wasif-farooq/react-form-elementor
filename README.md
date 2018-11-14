@@ -56,7 +56,7 @@ Here is some basic element that are provided.
 
 
 <details>
-#### <summary>Text Box</summary>
+<summary>Text Box</summary>
 <p>
 This is a `<input type="text" />` element.
 ```
