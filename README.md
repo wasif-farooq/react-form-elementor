@@ -96,6 +96,7 @@ This is a `<input type="text" />` element.
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
+___
 
 #### Text Area
 - name: String
@@ -137,6 +138,7 @@ This is a `<input type="text" />` element.
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
+___
 
 #### Password
 #### Attributes
@@ -178,6 +180,7 @@ This is a `<input type="text" />` element.
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
+___
 
 #### Hidden
 #### Attributes
@@ -219,6 +222,7 @@ This is a `<input type="text" />` element.
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
+___
 
 #### Check Box
 #### Attributes
@@ -259,6 +263,7 @@ This is a `<input type="text" />` element.
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
+___
 
 #### Radio Box
 #### Attributes
@@ -299,6 +304,8 @@ This is a `<input type="text" />` element.
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
+___
+
 #### Drop Down
 #### Attributes
 - name: String
@@ -337,6 +344,7 @@ This is a `<input type="text" />` element.
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
+___
 
 #### Multi Select
 #### Attributes
@@ -376,6 +384,7 @@ This is a `<input type="text" />` element.
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
+___
 
 #### File
 #### Attributes
