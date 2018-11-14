@@ -58,11 +58,13 @@ Here is some basic element that are provided.
 <details>
 <summary>Text Box</summary>
 <p>
-#### Text Box
 This is a `<input type="text" />` element.
+</p>
+<code>
 ```
 import { TextBox } from 'react-form-elementor';
 ```
+</code>
 ###### Attributes
 - name: String
 - value: either state variable or a string value
@@ -465,3 +467,17 @@ import { File } from 'react-form-elementor';
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
+
+## collapsible markdown?
+
+<details><summary>CLICK ME</summary>
+<p>
+
+#### yes, even hidden code blocks!
+
+```python
+print("hello world!")
+```
+
+</p>
+</details>
