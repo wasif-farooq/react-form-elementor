@@ -38,12 +38,6 @@ export default events(Form);
 ### Components
 Here is some basic element that are provided.
 
-| Component / Attibutes | name | value | placeholder | disabled | readOnly | classes | maxLength |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Text Box  | String | either state variable or a string value |
-| Text Area | String | either state variable or a string value |
-
-
 - [Text Box](#text-box)
 - [Text Area](#text-area)
 - [Password](#password)
@@ -54,11 +48,11 @@ Here is some basic element that are provided.
 - [Multi Select](#multi-select)
 - [File](#file)
 
-
+## Components
 <details><summary>Text Box</summary>
 <p>
 This is a `<input type="text" />` element.
-```
+```js
 import { TextBox } from 'react-form-elementor';
 ```
 ###### Attributes
