@@ -57,7 +57,9 @@ Here is some basic element that are provided.
 
 #### Text Box
 This is a `<input type="text" />` element.
-`import { TextBox } from 'react-form-elementor';`
+```
+import { TextBox } from 'react-form-elementor';
+```
 #### Attributes
 - name: String
 - value: either state variable or a string value
@@ -101,7 +103,9 @@ ___
 
 #### Text Area
 This is a `<textarea>` element.
-`import { TextArea } from 'react-form-elementor';`
+```
+import { TextArea } from 'react-form-elementor';
+```
 #### Attributes
 - name: String
 - value: either state variable or a string value
@@ -146,7 +150,9 @@ ___
 
 #### Password
 This is a `<input type="password" />` element.
-`import { Password } from 'react-form-elementor';`
+```
+import { Password } from 'react-form-elementor';
+```
 #### Attributes
 - name: String
 - value: either state variable or a string value
@@ -190,7 +196,9 @@ ___
 
 #### Hidden
 This is a `<input type="hidden" />` element.
-`import { Hidden } from 'react-form-elementor';`
+```
+import { Hidden } from 'react-form-elementor';
+```
 #### Attributes
 - name: String
 - value: either state variable or a string value
@@ -234,7 +242,9 @@ ___
 
 #### Check Box
 This is a `<input type="checkbox" />` element.
-`import { CheckBox } from 'react-form-elementor';`
+```
+import { CheckBox } from 'react-form-elementor';
+```
 #### Attributes
 - name: String
 - value: either state variable or a string value (this is the state value)
@@ -277,7 +287,9 @@ ___
 
 #### Radio Box
 This is a `<input type="radio" />` element.
-`import { RadioBox } from 'react-form-elementor';`
+```
+import { RadioBox } from 'react-form-elementor';
+```
 #### Attributes
 - name: String
 - value: either state variable or a string value (this is the state value)
@@ -320,7 +332,9 @@ ___
 
 #### Drop Down
 This is a `<select>` element.
-`import { DropDown } from 'react-form-elementor';`
+```
+import { DropDown } from 'react-form-elementor';
+```
 #### Attributes
 - name: String
 - value: either state variable or a string value 
@@ -362,7 +376,9 @@ ___
 
 #### Multi Select
 This is a `<select multiple="true"></select` element.
-`import { MultiSelect } from 'react-form-elementor';`
+```
+import { MultiSelect } from 'react-form-elementor';
+```
 #### Attributes
 - name: String
 - value: either state variable of Array type or a Array value 
@@ -404,7 +420,9 @@ ___
 
 #### File
 This is a `<input type="file" />` element.
-`import { File } from 'react-form-elementor';`
+```
+import { File } from 'react-form-elementor';
+```
 #### Attributes
 - name: String
 - value: either state variable of Array type or a Array value 
