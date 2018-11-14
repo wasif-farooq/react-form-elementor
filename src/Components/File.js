@@ -49,8 +49,8 @@ class File extends Base
                 {...(this.state.multiple === 'yes' ? { multiple: true }: '')}
                 {...(this.state.classes ? { className: this.state.classes }: '')}
                 {...(this.state.placeholder ? { placeholder: this.state.placeholder }: '')}
-                {...(this.state.disabled ? { disabled: this.state.disabled }: '')}
-                {...(this.state.readOnly ? { readOnly: this.state.readOnly }: '')}
+                {...(!!this.state.disabled ? { disabled: !!this.state.disabled }: '')}
+                {...(!!this.state.readOnly ? { readOnly: !!this.state.readOnly }: '')}
                 {...(this.onChange ? { onChange: this.onChange }: '')} 
                 {...(this.state.onBlur ? { onBlur: this.onBlur }: '')} 
                 {...(this.state.onFocus ? { onFocus: this.onFocus }: '')} 

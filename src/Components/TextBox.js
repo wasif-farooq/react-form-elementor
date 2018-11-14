@@ -47,8 +47,8 @@ class TextBox extends Base
                 {...(this.state.classes ? { className: this.state.classes }: '')}
                 {...(this.state.name ? { name: this.state.name }: '')}
                 {...(this.state.placeholder ? { placeholder: this.state.placeholder }: '')}
-                {...(this.state.disabled ? { disabled: this.state.disabled }: '')}
-                {...(this.state.readOnly ? { readOnly: this.state.readOnly }: '')}
+                {...(!!this.state.disabled ? { disabled: !!this.state.disabled }: '')}
+                {...(!!this.state.readOnly ? { readOnly: !!this.state.readOnly }: '')}
                 {...(this.state.maxLength ? { maxLength: this.state.maxLength }: '')}
                 {...(this.onChange ? { onChange: this.onChange }: '')} 
                 {...(this.state.onBlur ? { onBlur: this.onBlur }: '')} 

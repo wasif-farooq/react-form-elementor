@@ -13,6 +13,10 @@ import {
     events
 } from '../../src';
 
+import './css/style.css';
+
+
+
 class AppComponent extends Component
 {
     constructor(props) {

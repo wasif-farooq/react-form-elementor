@@ -10,16 +10,15 @@ export { File } from './Components/File';
 
 
 const events = (Component) => {
-    class Events extends Component {
-        onChange(value, name, event) {
-            let state = this.state;
+    var onChange = Component.prototype.onChange || false;
+    Component.prototype.onChange = function(value, name, event) {
+        let state = this.state;
             state[name] = value;
             this.setState(state);
-            super.onChange(value, name, event);
-        }
+            onChange ? onChange.call(Component, value, name, event): '';
     }
 
-    return Events;
+    return Component;
 };
 
 export { events }

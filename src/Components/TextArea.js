@@ -47,8 +47,8 @@ class TextArea extends Base
                 name={this.state.name || ''}
                 {...(this.state.classes ? { className: this.state.classes }: '')}
                 {...(this.state.placeholder ? { placeholder: this.state.placeholder }: '')}
-                {...(this.state.disabled ? { disabled: this.state.disabled }: '')}
-                {...(this.state.readOnly ? { readOnly: this.state.readOnly }: '')}
+                {...(!!this.state.disabled ? { disabled: !!this.state.disabled }: '')}
+                {...(!!this.state.readOnly ? { readOnly: !!this.state.readOnly }: '')}
                 {...(this.state.cols ? { cols: this.state.cols }: '')}
                 {...(this.state.rows ? { rows: this.state.rows }: '')}
                 {...(this.onChange ? { onChange: this.onChange }: '')} 

@@ -56,7 +56,7 @@ class CheckBox extends Base
                 checked={this.state.default == value ? true: false} 
                 name={this.state.name || ''}
                 {...(this.state.classes ? { className: this.state.classes }: '')}
-                {...(this.state.disabled ? { disabled: this.state.disabled }: '')}
+                {...(!!this.state.disabled ? { disabled: !!this.state.disabled }: '')}
                 {...(this.onChange ? { onChange: this.onChange }: '')} 
                 {...(this.state.onBlur ? { onBlur: this.onBlur }: '')} 
                 {...(this.state.onFocus ? { onFocus: this.onFocus }: '')} 
