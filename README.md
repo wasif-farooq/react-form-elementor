@@ -57,6 +57,7 @@ This is a `<input type="text" />` element.
 - disabled: either state variable or boolean value
 - readOnly:  either state variable or boolean value
 - maxLength: either state variable or boolean integer
+- classes: eiter state or string of class names
 #### Events
 - onChange
 - onBlur
@@ -68,16 +69,111 @@ This is a `<input type="text" />` element.
 #### Text Area
 
 #### Password
+#### Attributes
+- name: String
+- value: either state variable or a string value
+- placeholder: String
+- disabled: either state variable or boolean value
+- readOnly:  either state variable or boolean value
+- maxLength: either state variable or boolean integer
+- classes: eiter state or string of class names
+#### Events
+- onChange
+- onBlur
+- onFocus
+- onKeyPress
+- onKeyDown
+- onKeyUp
 
 #### Hidden
+#### Attributes
+- name: String
+- value: either state variable or a string value
+- placeholder: String
+- disabled: either state variable or boolean value
+- readOnly:  either state variable or boolean value
+- maxLength: either state variable or boolean integer
+- classes: eiter state or string of class names
+#### Events
+- onChange
+- onBlur
+- onFocus
+- onKeyPress
+- onKeyDown
+- onKeyUp
 
 #### Check Box
+#### Attributes
+- name: String
+- value: either state variable or a string value (this is the state value)
+- default: either state variable or a string value (this wil goes in value attribute for field)
+- disabled: either state variable or boolean value
+- readOnly:  either state variable or boolean value
+- classes: eiter state or string of class names
+#### Events
+- onChange
+- onClick
+- onBlur
+- onFocus
+- onMouseDown
+- onMouseUp
 
 #### Radio Box
-
+#### Attributes
+- name: String
+- value: either state variable or a string value (this is the state value)
+- default: either state variable or a string value (this wil goes in value attribute for field)
+- disabled: either state variable or boolean value
+- readOnly:  either state variable or boolean value
+- classes: eiter state or string of class names
+#### Events
+- onChange
+- onClick
+- onBlur
+- onFocus
+- onMouseDown
+- onMouseUp
 #### Drop Down
+#### Attributes
+- name: String
+- value: either state variable or a string value 
+- options: Array of object like `[{label: 'test', value: 1}]`
+- disabled: either state variable or boolean value
+- classes: eiter state or string of class names
+#### Events
+- onChange
+- onBlur
+- onFocus
+- onKeyPress
+- onKeyDown
+- onKeyUp
 
 #### Multi Select
+#### Attributes
+- name: String
+- value: either state variable of Array type or a Array value 
+- options: Array of object like `[{label: 'test', value: 1}]`
+- disabled: either state variable or boolean value
+- classes: eiter state or string of class names
+#### Events
+- onChange
+- onBlur
+- onFocus
+- onKeyPress
+- onKeyDown
+- onKeyUp
 
 #### File
-
+#### Attributes
+- name: String
+- value: either state variable of Array type or a Array value 
+- disabled: either state variable or boolean value
+- classes: eiter state or string of class names
+- multiple: boolean
+#### Events
+- onChange
+- onBlur
+- onFocus
+- onKeyPress
+- onKeyDown
+- onKeyUp
