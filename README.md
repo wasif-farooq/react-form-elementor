@@ -58,6 +58,7 @@ Here is some basic element that are provided.
 <details>
 <summary>Text Box</summary>
 <p>
+#### Text Box
 This is a `<input type="text" />` element.
 ```
 import { TextBox } from 'react-form-elementor';
