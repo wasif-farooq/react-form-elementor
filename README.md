@@ -45,6 +45,7 @@ Here is some basic element that are provided.
 | Text Box  | String | either state variable or a string value |
 | Text Area | String | either state variable or a string value |
 
+
 - [Text Box](#text-box)
 - [Text Area](#text-area)
 - [Password](#password)
