@@ -60,7 +60,7 @@ This is a `<input type="text" />` element.
 ```
 import { TextBox } from 'react-form-elementor';
 ```
-#### Attributes
+###### Attributes
 - name: String
 - value: either state variable or a string value
 - placeholder: String
@@ -68,7 +68,7 @@ import { TextBox } from 'react-form-elementor';
 - readOnly:  either state variable or boolean value
 - maxLength: either state variable or integer
 - classes: eiter state or string of class names
-#### Events
+##### Events
 - onChange:
     - params: 
         - value: String
@@ -106,7 +106,7 @@ This is a `<textarea>` element.
 ```
 import { TextArea } from 'react-form-elementor';
 ```
-#### Attributes
+##### Attributes
 - name: String
 - value: either state variable or a string value
 - placeholder: String
@@ -115,7 +115,7 @@ import { TextArea } from 'react-form-elementor';
 - classes: eiter state or string of class names
 - rows: either state variable or integer
 - cols: either state variable or integer
-#### Events
+##### Events
 - onChange:
     - params: 
         - value: String
@@ -153,7 +153,7 @@ This is a `<input type="password" />` element.
 ```
 import { Password } from 'react-form-elementor';
 ```
-#### Attributes
+##### Attributes
 - name: String
 - value: either state variable or a string value
 - placeholder: String
@@ -161,7 +161,7 @@ import { Password } from 'react-form-elementor';
 - readOnly:  either state variable or boolean value
 - maxLength: either state variable or boolean integer
 - classes: eiter state or string of class names
-#### Events
+##### Events
 - onChange
     - params: 
         - value: String
@@ -199,7 +199,7 @@ This is a `<input type="hidden" />` element.
 ```
 import { Hidden } from 'react-form-elementor';
 ```
-#### Attributes
+##### Attributes
 - name: String
 - value: either state variable or a string value
 - placeholder: String
@@ -207,7 +207,7 @@ import { Hidden } from 'react-form-elementor';
 - readOnly:  either state variable or boolean value
 - maxLength: either state variable or boolean integer
 - classes: eiter state or string of class names
-#### Events
+##### Events
 - onChange
     - params: 
         - value: String
@@ -245,14 +245,14 @@ This is a `<input type="checkbox" />` element.
 ```
 import { CheckBox } from 'react-form-elementor';
 ```
-#### Attributes
+##### Attributes
 - name: String
 - value: either state variable or a string value (this is the state value)
 - default: either state variable or a string value (this wil goes in value attribute for field)
 - disabled: either state variable or boolean value
 - readOnly:  either state variable or boolean value
 - classes: eiter state or string of class names
-#### Events
+##### Events
 - onChange
     - params: 
         - value: String
@@ -290,14 +290,14 @@ This is a `<input type="radio" />` element.
 ```
 import { RadioBox } from 'react-form-elementor';
 ```
-#### Attributes
+##### Attributes
 - name: String
 - value: either state variable or a string value (this is the state value)
 - default: either state variable or a string value (this wil goes in value attribute for field)
 - disabled: either state variable or boolean value
 - readOnly:  either state variable or boolean value
 - classes: eiter state or string of class names
-#### Events
+##### Events
 - onChange
     - params: 
         - value: String
@@ -335,13 +335,13 @@ This is a `<select>` element.
 ```
 import { DropDown } from 'react-form-elementor';
 ```
-#### Attributes
+##### Attributes
 - name: String
 - value: either state variable or a string value 
 - options: Array of object like `[{label: 'test', value: 1}]`
 - disabled: either state variable or boolean value
 - classes: eiter state or string of class names
-#### Events
+##### Events
 - onChange
     - params: 
         - value: String
@@ -379,13 +379,13 @@ This is a `<select multiple="true"></select` element.
 ```
 import { MultiSelect } from 'react-form-elementor';
 ```
-#### Attributes
+##### Attributes
 - name: String
 - value: either state variable of Array type or a Array value 
 - options: Array of object like `[{label: 'test', value: 1}]`
 - disabled: either state variable or boolean value
 - classes: eiter state or string of class names
-#### Events
+##### Events
 - onChange
     - params: 
         - value: String
@@ -423,13 +423,13 @@ This is a `<input type="file" />` element.
 ```
 import { File } from 'react-form-elementor';
 ```
-#### Attributes
+##### Attributes
 - name: String
 - value: either state variable of Array type or a Array value 
 - disabled: either state variable or boolean value
 - classes: eiter state or string of class names
 - multiple: boolean
-#### Events
+##### Events
 - onChange
     - params: 
         - value: String
