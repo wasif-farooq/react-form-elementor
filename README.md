@@ -38,8 +38,8 @@ export default events(Form);
 ### Components
 Here is some basic element that are provided.
 
-| Component | Name | Value | Place Holder |
-| :--- | :---: | :---: | :---: |
+| Component / Attibutes | name | value | placeholder | disabled | readOnly | classes | maxLength |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Text Box  | String | either state variable or a string value |
 | Text Area | String | either state variable or a string value |
 
