@@ -35,7 +35,7 @@ export default events(Form);
 
 **Note.** please be carefull you need to pass state key name as element name property like show in above example.
 
-### Components
+## Components
 Here is some basic element that are provided.
 
 - [Text Box](#text-box)
@@ -48,9 +48,10 @@ Here is some basic element that are provided.
 - [Multi Select](#multi-select)
 - [File](#file)
 
-## Components
-<details><summary>Text Box</summary>
+## Details
+<details><summary>TEXT BOX</summary>
 <p>
+
 This is a `<input type="text" />` element.
 ```js
 import { TextBox } from 'react-form-elementor';
@@ -96,9 +97,8 @@ import { TextBox } from 'react-form-elementor';
         - event: Object (the Event Object)
 </p>
 </details>
-___
 
-#### Text Area
+### Text Area
 This is a `<textarea>` element.
 ```
 import { TextArea } from 'react-form-elementor';
