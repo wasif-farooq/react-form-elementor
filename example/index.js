@@ -9,10 +9,11 @@ import {
     DropDown,
     MultiSelect,
     TextArea,
-    File
+    File,
+    events
 } from '../src';
 
-class App extends Component
+class AppComponent extends Component
 {
     constructor(props) {
         super(props);
@@ -28,12 +29,6 @@ class App extends Component
         };
 
         this.onChange = this.onChange.bind(this);
-    }
-
-    onChange(value, name) {
-        let state = this.state;
-        state[name] = value;
-        this.setState(state);
     }
 
     render() {
@@ -70,5 +65,7 @@ class App extends Component
     }
 }
 
+
+const App = events(AppComponent);
 ReactDOM.render(<App />, document.getElementById('root'));
 module.hot.accept();
