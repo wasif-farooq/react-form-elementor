@@ -7,7 +7,8 @@ import {
     CheckBox,
     RadioBox,
     DropDown,
-    MultiSelect
+    MultiSelect,
+    TextArea
 } from '../src';
 
 class App extends Component
@@ -20,7 +21,8 @@ class App extends Component
             chk: '',
             rdo: '',
             dd: '1',
-            mm: ['1']
+            mm: ['1'],
+            ta: 'testme area'
         };
 
         this.onChange = this.onChange.bind(this);
@@ -55,6 +57,8 @@ class App extends Component
 
                 <DropDown name="dd" value={this.state.dd} options={options} onChange={this.onChange} />
                 <MultiSelect name="mm" value={this.state.mm} options={options} onChange={this.onChange} />
+
+                <TextArea name="ta" value={this.state.ta} onChange={this.onChange} />
                 
             </div>
         )
