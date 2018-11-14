@@ -56,7 +56,8 @@ Here is some basic element that are provided.
 
 
 <details>
-<summary>#### Text Box</summary>
+#### <summary>Text Box</summary>
+<p>
 This is a `<input type="text" />` element.
 ```
 import { TextBox } from 'react-form-elementor';
@@ -100,6 +101,7 @@ import { TextBox } from 'react-form-elementor';
         - value: String
         - name: String (the name of the field)
         - event: Object (the Event Object)
+</p>
 </details>
 ___
 
