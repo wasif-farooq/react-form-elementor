@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import { Base } from './Base';
 
+/**
+ * 
+ */
 class File extends Base
 {
+    /**
+     * 
+     * @param Object props 
+     * @return void
+     */
     constructor(props)
     {
         super(props);
@@ -29,6 +37,9 @@ class File extends Base
         };
     }
 
+    /**
+     * Built-in React function to render element on DOM
+     */
     render() {
         return (
             <input

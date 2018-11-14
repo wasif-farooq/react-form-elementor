@@ -2,8 +2,16 @@ import React from 'react';
 import { Base } from './Base';
 import { Option } from './Option';
 
+/**
+ * 
+ */
 class DropDown extends Base
 {
+    /**
+     * 
+     * @param Object props 
+     * @return void
+     */
     constructor(props) {
         super(props);
         this.type = 'select';
@@ -27,6 +35,9 @@ class DropDown extends Base
         };
     }
 
+    /**
+     * Built-in React function to render element on DOM
+     */
     render() {
         const { value, options } = this.state;
         

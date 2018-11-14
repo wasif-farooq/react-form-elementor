@@ -3,6 +3,11 @@ import { Base } from './Base';
 
 class RadioBox extends Base
 {
+    /**
+     * 
+     * @param Object props 
+     * @return void
+     */
     constructor(props) {
         super(props);
         this.type = 'radio';
@@ -25,10 +30,18 @@ class RadioBox extends Base
         };
     }
 
+    /**
+     * @inherit
+     * @param Object event 
+     * @return String
+     */
     getFieldValue(event) {
         return event.target.checked ? event.target.value: '';
     }
 
+    /**
+     * Built-in React function to render element on DOM
+     */
     render() {
         const { value } = this.state;
 

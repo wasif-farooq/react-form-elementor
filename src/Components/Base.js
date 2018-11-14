@@ -149,11 +149,22 @@ class Base extends Component
         this.emit(value, event, this.state.onMouseUp);
     }
 
+    /**
+     * 
+     * @param Object event
+     * @return void
+     */
     onSelectStart(Event) {
         let value = this.getFieldValue(event);
         this.emit(value, event, this.state.onSelectStart);
     }
 
+    /**
+     * 
+     * @param Object props 
+     * @param Object state 
+     * @return void
+     */
     componentWillUpdate(props, state) {
         state = Object.assign(state, props);
     }
