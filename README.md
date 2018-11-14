@@ -55,16 +55,6 @@ Here is some basic element that are provided.
 - [File](#file)
 
 
-|             |          Grouping           ||
-First Header  | Second Header | Third Header |
- ------------ | :-----------: | -----------: |
-Content       |          *Long Cell*        ||
-Content       |   **Cell**    |         Cell |
-
-New section   |     More      |         Data |
-And more      | With an escaped '\|'         ||  
-[Prototype table]
-
 #### Text Box
 This is a `<input type="text" />` element.
 #### Attributes
