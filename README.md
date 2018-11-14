@@ -5,7 +5,7 @@
 ## How To Use
 
 ### Components
-- [Text Box]
+- [Text Box](#text-box)
 - [Text Area]
 - [Password]
 - [Hidden]
@@ -32,3 +32,4 @@
 #### Multi Select
 
 #### File
+
