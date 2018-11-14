@@ -44,15 +44,6 @@ Here is some basic element that are provided.
 | Text Area | String | either state variable or a string value |
 
 
-|             |          Grouping           ||
-First Header  | Second Header | Third Header |
- ------------ | :-----------: | -----------: |
-Content       |          *Long Cell*        ||
-Content       |   **Cell**    |         Cell |
-
-New section   |     More      |         Data |
-And more      | With an escaped '\|'         ||  
-
 - [Text Box](#text-box)
 - [Text Area](#text-area)
 - [Password](#password)
@@ -62,6 +53,17 @@ And more      | With an escaped '\|'         ||
 - [Drop Down](#drop-down)
 - [Multi Select](#multi-select)
 - [File](#file)
+
+
+|             |          Grouping           ||
+First Header  | Second Header | Third Header |
+ ------------ | :-----------: | -----------: |
+Content       |          *Long Cell*        ||
+Content       |   **Cell**    |         Cell |
+
+New section   |     More      |         Data |
+And more      | With an escaped '\|'         ||  
+[Prototype table]
 
 #### Text Box
 This is a `<input type="text" />` element.
