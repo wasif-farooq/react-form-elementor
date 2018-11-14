@@ -48,7 +48,6 @@ class TextArea extends Base
                 {...(this.state.onKeyUp ? { onKeyUp: this.onKeyUp }: '')} 
                 {...(this.state.onKeyDown ? { onKeyDown: this.onKeyDown }: '')} 
             >
-            {this.state.value}
             </textarea>
         )
     }
