@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { Base } from './Base';
 
-class TextArea extends Base
+class File extends Base
 {
     constructor(props)
     {
         super(props);
-        this.type = 'textarea';
+        this.type = 'file';
 
         this.defaults = {
             name: '',
             value: '',
             placeholder: '',
             classes: '',
-            cols: false,
-            rows: false,
+            maxLength: false,
             disabled: false,
-            readOnly: false
+            readOnly: false,
+            multiple: false
         };
 
         this.events = {
@@ -31,25 +31,24 @@ class TextArea extends Base
 
     render() {
         return (
-            <textarea
+            <input
+                type={this.type} 
                 value={this.state.value} 
-                name={this.state.name || ''}
+                name={this.state.name || ''} 
+                {...(this.state.multiple === 'yes' ? { multiple: true }: '')}
                 {...(this.state.classes ? { className: this.state.classes }: '')}
                 {...(this.state.placeholder ? { placeholder: this.state.placeholder }: '')}
                 {...(this.state.disabled ? { disabled: this.state.disabled }: '')}
                 {...(this.state.readOnly ? { readOnly: this.state.readOnly }: '')}
-                {...(this.state.cols ? { cols: this.state.cols }: '')}
-                {...(this.state.rows ? { rows: this.state.rows }: '')}
                 {...(this.onChange ? { onChange: this.onChange }: '')} 
                 {...(this.state.onBlur ? { onBlur: this.onBlur }: '')} 
                 {...(this.state.onFocus ? { onFocus: this.onFocus }: '')} 
                 {...(this.state.onKeyPress ? { onKeyPress: this.onKeyPress }: '')} 
                 {...(this.state.onKeyUp ? { onKeyUp: this.onKeyUp }: '')} 
                 {...(this.state.onKeyDown ? { onKeyDown: this.onKeyDown }: '')} 
-            >
-            </textarea>
+            />
         )
     }
 }
 
-export { TextArea }
+export { File }

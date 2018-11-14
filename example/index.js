@@ -8,7 +8,8 @@ import {
     RadioBox,
     DropDown,
     MultiSelect,
-    TextArea
+    TextArea,
+    File
 } from '../src';
 
 class App extends Component
@@ -22,7 +23,8 @@ class App extends Component
             rdo: '',
             dd: '1',
             mm: ['1'],
-            ta: 'testme area'
+            ta: 'testme area',
+            fl: ''
         };
 
         this.onChange = this.onChange.bind(this);
@@ -59,6 +61,9 @@ class App extends Component
                 <MultiSelect name="mm" value={this.state.mm} options={options} onChange={this.onChange} />
 
                 <TextArea name="ta" value={this.state.ta} onChange={this.onChange} />
+                <br />
+
+                <File name="fl" value={this.state.fl} onChange={this.onChange} multiple="yes" />
                 
             </div>
         )

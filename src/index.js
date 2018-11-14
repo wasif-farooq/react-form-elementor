@@ -6,3 +6,4 @@ export { CheckBox } from './Components/CheckBox';
 export { RadioBox } from './Components/RadioBox';
 export { DropDown } from './Components/DropDown';
 export { MultiSelect } from './Components/MultiSelect';
+export { File } from './Components/File';
