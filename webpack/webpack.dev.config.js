@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 
 module.exports = {
-entry: './example/index.js',
+entry: './example/src/index.js',
   module: {
     rules: [
       {
@@ -25,7 +25,7 @@ entry: './example/index.js',
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./example/index.html",
+      template: "./example/src/index.html",
       filename: "./index.html"
     }),
     new webpack.HotModuleReplacementPlugin()

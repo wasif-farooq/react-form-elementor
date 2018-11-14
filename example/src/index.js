@@ -11,7 +11,7 @@ import {
     TextArea,
     File,
     events
-} from '../src';
+} from '../../src';
 
 class AppComponent extends Component
 {

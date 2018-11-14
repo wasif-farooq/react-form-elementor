@@ -4,9 +4,17 @@
   "description": "This package provide you a react based shared library to manage basic form element in react so you not waste you time doing that again and again.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development"
+    "start": "webpack-dev-server --config ./webpack/webpack.dev.config.js --mode development",
+    "build": "webpack --config ./webpack/webpack.config.js --mode production",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
-  "keywords": ["form", "elements", "react", "form-elements"],
+  "keywords": [
+    "form",
+    "elements",
+    "react",
+    "form-elements"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -14,6 +22,7 @@
     "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "gh-pages": "^2.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "react-hot-loader": "^4.3.12",
