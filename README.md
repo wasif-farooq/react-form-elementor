@@ -38,9 +38,9 @@ export default events(Form);
 ### Components
 Here is some basic element that are provided.
 
-| | Attributes |
-| :--- | :---: | :---: |
-| Components | Name | Value |
+| Components | Attributes |
+| :--- | :---: |
+| | Name | Value |
 | Text Box   | String     | either state variable or a string value    |
 | Text Area     | String       | either state variable or a string value      |
 
