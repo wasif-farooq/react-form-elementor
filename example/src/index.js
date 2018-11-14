@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
 import { 
     TextBox,
@@ -19,48 +19,110 @@ class AppComponent extends Component
         super(props);
 
         this.state = {
-            test: 'text em',
-            chk: '',
-            rdo: '',
-            dd: '1',
-            mm: ['1'],
-            ta: 'testme area',
-            fl: ''
+            name: '',
+            industry: '',
+            description: '',
+            password: '',
+            radio: 'checked',
+            checked: '',
+            unchecked: '',
+            checkedDisabled: ''
         };
+
+        this.industries = [{
+            label: 'Computer',
+            value: 'computer'
+        }, {
+            label: 'Fashion',
+            value: 'fashionr'
+        }, {
+            label: 'Agriculture',
+            value: 'agriculture'
+        }];
 
         this.onChange = this.onChange.bind(this);
     }
 
     render() {
-        const options = [{
-            label: 'Option 1',
-            value: '1'
-        }, {
-            label: 'Option 2',
-            value: '2'
-        }];
-
         return (
-            <div>
-                <h1>App Test</h1>
-                <TextBox value={this.state.test} name="test" onChange={this.onChange} />
-                <Password value={this.state.test} name="test" onChange={this.onChange} />
-                <Hidden value="me" />
-                <br />
-                <CheckBox name="chk" value={this.state.chk} default="1" onChange={this.onChange} />
-                <br />
-                <RadioBox name="rdo" value={this.state.rdo} default="1" onChange={this.onChange} />
-                <RadioBox name="rdo" value={this.state.rdo} default="2" onChange={this.onChange} />
-
-                <DropDown name="dd" value={this.state.dd} options={options} onChange={this.onChange} />
-                <MultiSelect name="mm" value={this.state.mm} options={options} onChange={this.onChange} />
-
-                <TextArea name="ta" value={this.state.ta} onChange={this.onChange} />
-                <br />
-
-                <File name="fl" value={this.state.fl} onChange={this.onChange} multiple="yes" />
-                
-            </div>
+            <Fragment>
+                <div className="form-group">
+                    <label className="label-control">
+                        <span>Name</span>
+                        <span className="mark">*</span>
+                    </label>
+                    <TextBox value={this.state.name} name="name" classes="form-control" placeholder="placeholder" onChange={this.onChange} />
+                </div>
+                <div className="form-group">
+                    <label className="label-control">
+                        <span>Industry</span>
+                        <span className="mark">*</span>
+                    </label>
+                    <DropDown name="industry" value={this.state.industry} classes="form-control" options={this.industries} onChange={this.onChange} />
+                </div>
+                <div className="form-group">
+                    <label className="label-control">
+                        <span>Password</span>
+                    </label>
+                    <Password classes="form-control" value={this.state.password} name="password" placeholder="placeholder" onChange={this.onChange} />
+                </div>
+                <div className="form-group">
+                    <label className="label-control">
+                        <span>Remarks</span>
+                    </label>
+                    <TextArea classes="form-control" name="description" value={this.state.description} onChange={this.onChange} />
+                </div>
+                <div className="form-group">
+                    <div className="checkbox">
+                        <label>
+                        <CheckBox classes="form-control" name="checked" value="1" default="1" />
+                            <i></i>
+                            <span>Checked</span>
+                        </label>
+                    </div>
+                    <div className="checkbox">
+                        <label>
+                            <CheckBox classes="form-control" name="unchecked" value={this.state.checked} default="1" onChange={this.onChange} />
+                            <i></i>
+                            <span>Un Checked</span>
+                        </label>
+                    </div>
+                    <div className="checkbox">
+                        <label>
+                            <CheckBox classes="form-control" name="checkedDisabled" value={this.state.checkedDisabled} default="1" disabled="true" onChange={this.onChange} />
+                            <i></i>
+                            <span>Disabled</span>
+                        </label>
+                    </div>
+                </div>
+                <div className="form-group">
+                    <div className="radio">
+                        <label>
+                            <RadioBox classes="form-control" name="radio" value={this.state.radio} default="checked" onChange={this.onChange} />
+                            <i></i>
+                            <span>Checked</span>
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <RadioBox classes="form-control" name="radio" value={this.state.radio} default="un-checked" onChange={this.onChange} />
+                            <i></i>
+                            <span>Un Checked</span>
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <RadioBox classes="form-control" name="radio" value={this.state.radio} default="disabled" disabled="true" onChange={this.onChange} />
+                            <i></i>
+                            <span>Disabled</span>
+                        </label>
+                    </div>
+                </div>
+                <div className="form-group">
+                    <button className="btn btn-primary" type="button">Submit</button>
+                    <button className="btn btn-primary btn-round" type="button">Submit</button>
+                </div>
+            </Fragment>
         )
     }
 }
