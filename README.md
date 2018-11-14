@@ -33,7 +33,7 @@ class Form extends Component
 export default events(Form);
 ```
 
-**Note. ** please be carefull you need to pass state key name as element name property like show in above example.
+**Note.** please be carefull you need to pass state key name as element name property like show in above example.
 
 ### Components
 Here is some basic element that are provided.
@@ -51,12 +51,12 @@ Here is some basic element that are provided.
 #### Text Box
 This is a `<input type="text" />` element.
 #### Attributes
-- **name: ** String
-- **value: ** either state variable or a string value
-- **placeholder: ** String
-- **disabled: ** either state variable or boolean value
-- **readOnly: ** either state variable or boolean value
-- **maxLength: ** either state variable or boolean integer
+- name: String
+- value: either state variable or a string value
+- placeholder: String
+- disabled: either state variable or boolean value
+- readOnly:  either state variable or boolean value
+- maxLength: either state variable or boolean integer
 #### Events
 - onChange
 - onBlur
