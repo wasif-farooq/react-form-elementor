@@ -1,6 +1,6 @@
 {
   "name": "react-form-elementor",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1",
   "description": "This package provide you a react based shared library to manage basic form element in react so you not waste you time doing that again and again.",
   "main": "index.js",
   "scripts": {
