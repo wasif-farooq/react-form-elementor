@@ -16,6 +16,7 @@ class CheckBox extends Base
         this.type = 'checkbox';
 
         this.defaults = {
+            id: '',
             name: '',
             value: '',
             default: '',
@@ -51,9 +52,9 @@ class CheckBox extends Base
         return (
             <input
                 type={this.type} 
-                id={this.state.name + '-' + value} 
+                id={this.state.id} 
                 value={this.state.default} 
-                checked={this.state.default == value ? true: false} 
+                checked={this.state.default === value ? true: false} 
                 name={this.state.name || ''}
                 {...(this.state.classes ? { className: this.state.classes }: '')}
                 {...(!!this.state.disabled ? { disabled: !!this.state.disabled }: '')}

@@ -28,9 +28,10 @@ class AppComponent extends Component
             description: '',
             password: '',
             radio: 'checked',
-            checked: '',
+            checked: '1',
             unchecked: '',
-            checkedDisabled: ''
+            checkedDisabled: '',
+            industryMulti: []
         };
 
         this.industries = [{
@@ -45,17 +46,31 @@ class AppComponent extends Component
         }];
 
         this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
+    onSubmit(event) {
+        event.preventDefault();
+        console.log(this.state);
+        return false;
     }
 
     render() {
         return (
             <Fragment>
+            <form className="form-horizontal" action="" method="" onSubmit={this.onSubmit} >
                 <div className="form-group">
                     <label className="label-control">
                         <span>Name</span>
                         <span className="mark">*</span>
                     </label>
                     <TextBox value={this.state.name} name="name" classes="form-control" placeholder="placeholder" onChange={this.onChange} />
+                </div>
+                <div className="form-group">
+                    <label className="label-control">
+                        <span>Password</span>
+                    </label>
+                    <Password classes="form-control" value={this.state.password} name="password" placeholder="placeholder" onChange={this.onChange} />
                 </div>
                 <div className="form-group">
                     <label className="label-control">
@@ -66,27 +81,22 @@ class AppComponent extends Component
                 </div>
                 <div className="form-group">
                     <label className="label-control">
-                        <span>Password</span>
+                        <span>Industry</span>
+                        <span className="mark">*</span>
                     </label>
-                    <Password classes="form-control" value={this.state.password} name="password" placeholder="placeholder" onChange={this.onChange} />
-                </div>
-                <div className="form-group">
-                    <label className="label-control">
-                        <span>Remarks</span>
-                    </label>
-                    <TextArea classes="form-control" name="description" value={this.state.description} onChange={this.onChange} />
+                    <MultiSelect name="industryMulti" value={this.state.industryMulti} classes="form-control" options={this.industries} onChange={this.onChange} />
                 </div>
                 <div className="form-group">
                     <div className="checkbox">
-                        <label>
-                        <CheckBox classes="form-control" name="checked" value="1" default="1" />
+                        <label htmlFor="chk-1">
+                            <CheckBox classes="form-control" name="checked" value={this.state.checked} default="1" id="chk-1" onChange={this.onChange} />
                             <i></i>
                             <span>Checked</span>
                         </label>
                     </div>
                     <div className="checkbox">
-                        <label>
-                            <CheckBox classes="form-control" name="unchecked" value={this.state.checked} default="1" onChange={this.onChange} />
+                        <label htmlFor="chk=2">
+                            <CheckBox classes="form-control" name="unchecked" value={this.state.unchecked} default="1" onChange={this.onChange} id="chk=2" />
                             <i></i>
                             <span>Un Checked</span>
                         </label>
@@ -123,9 +133,18 @@ class AppComponent extends Component
                     </div>
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-primary" type="button">Submit</button>
-                    <button className="btn btn-primary btn-round" type="button">Submit</button>
+                    <label className="label-control">
+                        <span>Remarks</span>
+                    </label>
+                    <TextArea classes="form-control" name="description" value={this.state.description} onChange={this.onChange} />
                 </div>
+                <div className="form-group">
+                    <button className="btn btn-primary" type="submit">Submit</button>
+                </div>
+                <div className="form-group">
+                    <p>After click submit check you console for data</p>
+                </div>
+            </form>
             </Fragment>
         )
     }
