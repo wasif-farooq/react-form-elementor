@@ -1,15 +1,7 @@
 import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
-import { 
-    TextBox,
-    Password,
-    Hidden,
-    CheckBox,
-    RadioBox,
-    DropDown,
-    MultiSelect,
-    TextArea,
-    File,
+import {
+    Element,
     events
 } from '../../src';
 
@@ -64,46 +56,46 @@ class AppComponent extends Component
                         <span>Name</span>
                         <span className="mark">*</span>
                     </label>
-                    <TextBox value={this.state.name} name="name" classes="form-control" placeholder="placeholder" onChange={this.onChange} />
+                    <Element type="text" value={this.state.name} name="name" classes="form-control" placeholder="placeholder" onChange={this.onChange} />
                 </div>
                 <div className="form-group">
                     <label className="label-control">
                         <span>Password</span>
                     </label>
-                    <Password classes="form-control" value={this.state.password} name="password" placeholder="placeholder" onChange={this.onChange} />
+                    <Element type="password" classes="form-control" value={this.state.password} name="password" placeholder="placeholder" onChange={this.onChange} />
                 </div>
                 <div className="form-group">
                     <label className="label-control">
                         <span>Industry</span>
                         <span className="mark">*</span>
                     </label>
-                    <DropDown name="industry" value={this.state.industry} classes="form-control" options={this.industries} onChange={this.onChange} />
+                    <Element type="dropdown" name="industry" value={this.state.industry} classes="form-control" options={this.industries} onChange={this.onChange} />
                 </div>
                 <div className="form-group">
                     <label className="label-control">
                         <span>Industry</span>
                         <span className="mark">*</span>
                     </label>
-                    <MultiSelect name="industryMulti" value={this.state.industryMulti} classes="form-control" options={this.industries} onChange={this.onChange} />
+                    <Element type="multi-select" name="industryMulti" value={this.state.industryMulti} classes="form-control" options={this.industries} onChange={this.onChange} />
                 </div>
                 <div className="form-group">
                     <div className="checkbox">
                         <label htmlFor="chk-1">
-                            <CheckBox classes="form-control" name="checked" value={this.state.checked} default="1" id="chk-1" onChange={this.onChange} />
+                            <Element type="checkbox" classes="form-control" name="checked" value={this.state.checked} default="1" id="chk-1" onChange={this.onChange} />
                             <i></i>
                             <span>Checked</span>
                         </label>
                     </div>
                     <div className="checkbox">
                         <label htmlFor="chk=2">
-                            <CheckBox classes="form-control" name="unchecked" value={this.state.unchecked} default="1" onChange={this.onChange} id="chk=2" />
+                            <Element type="checkbox" classes="form-control" name="unchecked" value={this.state.unchecked} default="1" onChange={this.onChange} id="chk=2" />
                             <i></i>
                             <span>Un Checked</span>
                         </label>
                     </div>
                     <div className="checkbox">
                         <label>
-                            <CheckBox classes="form-control" name="checkedDisabled" value={this.state.checkedDisabled} default="1" disabled="true" onChange={this.onChange} />
+                            <Element type="checkbox" classes="form-control" name="checkedDisabled" value={this.state.checkedDisabled} default="1" disabled="true" onChange={this.onChange} />
                             <i></i>
                             <span>Disabled</span>
                         </label>
@@ -112,21 +104,21 @@ class AppComponent extends Component
                 <div className="form-group">
                     <div className="radio">
                         <label>
-                            <RadioBox classes="form-control" name="radio" value={this.state.radio} default="checked" onChange={this.onChange} />
+                            <Element type="radio" classes="form-control" name="radio" value={this.state.radio} default="checked" onChange={this.onChange} />
                             <i></i>
                             <span>Checked</span>
                         </label>
                     </div>
                     <div className="radio">
                         <label>
-                            <RadioBox classes="form-control" name="radio" value={this.state.radio} default="un-checked" onChange={this.onChange} />
+                            <Element type="radio" classes="form-control" name="radio" value={this.state.radio} default="un-checked" onChange={this.onChange} />
                             <i></i>
                             <span>Un Checked</span>
                         </label>
                     </div>
                     <div className="radio">
                         <label>
-                            <RadioBox classes="form-control" name="radio" value={this.state.radio} default="disabled" disabled="true" onChange={this.onChange} />
+                            <Element type="radio" classes="form-control" name="radio" value={this.state.radio} default="disabled" disabled="true" onChange={this.onChange} />
                             <i></i>
                             <span>Disabled</span>
                         </label>
@@ -136,7 +128,7 @@ class AppComponent extends Component
                     <label className="label-control">
                         <span>Remarks</span>
                     </label>
-                    <TextArea classes="form-control" name="description" value={this.state.description} onChange={this.onChange} />
+                    <Element type="textarea" classes="form-control" name="description" value={this.state.description} onChange={this.onChange} />
                 </div>
                 <div className="form-group">
                     <button className="btn btn-primary" type="submit">Submit</button>
@@ -145,6 +137,7 @@ class AppComponent extends Component
                     <p>After click submit check you console for data</p>
                 </div>
             </form>
+            
             </Fragment>
         )
     }

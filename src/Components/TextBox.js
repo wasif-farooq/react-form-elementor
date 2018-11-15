@@ -17,6 +17,7 @@ class TextBox extends Base
         this.type = 'text';
 
         this.defaults = {
+            id: '',
             name: '',
             value: '',
             placeholder: '',
@@ -46,6 +47,7 @@ class TextBox extends Base
                 value={this.state.value} 
                 {...(this.state.classes ? { className: this.state.classes }: '')}
                 {...(this.state.name ? { name: this.state.name }: '')}
+                {...(this.state.id ? { id: this.state.id }: '')}
                 {...(this.state.placeholder ? { placeholder: this.state.placeholder }: '')}
                 {...(!!this.state.disabled ? { disabled: !!this.state.disabled }: '')}
                 {...(!!this.state.readOnly ? { readOnly: !!this.state.readOnly }: '')}

@@ -17,6 +17,7 @@ class File extends Base
         this.type = 'file';
 
         this.defaults = {
+            id: '',
             name: '',
             value: '',
             placeholder: '',
@@ -46,6 +47,7 @@ class File extends Base
                 type={this.type} 
                 value={this.state.value} 
                 name={this.state.name || ''} 
+                {...(this.state.id ? { id: this.state.id }: '')}
                 {...(this.state.multiple === 'yes' ? { multiple: true }: '')}
                 {...(this.state.classes ? { className: this.state.classes }: '')}
                 {...(this.state.placeholder ? { placeholder: this.state.placeholder }: '')}

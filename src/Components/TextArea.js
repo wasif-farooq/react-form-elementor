@@ -17,6 +17,7 @@ class TextArea extends Base
         this.type = 'textarea';
 
         this.defaults = {
+            id: '',
             name: '',
             value: '',
             placeholder: '',
@@ -45,6 +46,7 @@ class TextArea extends Base
             <textarea
                 value={this.state.value} 
                 name={this.state.name || ''}
+                {...(this.state.id ? { id: this.state.id }: '')}
                 {...(this.state.classes ? { className: this.state.classes }: '')}
                 {...(this.state.placeholder ? { placeholder: this.state.placeholder }: '')}
                 {...(!!this.state.disabled ? { disabled: !!this.state.disabled }: '')}

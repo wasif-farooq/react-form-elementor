@@ -18,6 +18,7 @@ class DropDown extends Base
         this.multiple = false;
 
         this.defaults = {
+            id: '',
             name: '',
             value: [],
             options: [],
@@ -43,10 +44,10 @@ class DropDown extends Base
         
         return (
             <select
-                id={this.state.name} 
                 name={this.state.name || ''}
                 multiple={this.multiple} 
                 value={value} 
+                {...(this.state.id ? { id: this.state.id }: '')}
                 {...(this.state.classes ? { className: this.state.classes }: '')}
                 {...(!!this.state.disabled ? { disabled: !!this.state.disabled }: '')}
                 {...(this.onChange ? { onChange: this.onChange }: '')} 

@@ -4,7 +4,7 @@ import { TextBox } from './TextBox';
 /**
  * 
  */
-class Numeric extends TextBox
+class Email extends TextBox
 {
     /**
      * 
@@ -14,8 +14,8 @@ class Numeric extends TextBox
     constructor(props)
     {
         super(props);
-        this.type = 'number'
+        this.type = 'email'
     }
 }
 
-export { Numeric }
+export { Email }
