@@ -41,5 +41,16 @@
   "dependencies": {
     "react": "^16.6.1",
     "react-dom": "^16.6.1"
-  }
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonsor/react-form-elementor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sonsor/react-form-elementor/issues"
+  },
+  "homepage": "https://github.com/sonsor/react-form-elementor#readme"
 }
